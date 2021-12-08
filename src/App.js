@@ -1,7 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
+import { DataStore } from '@aws-amplify/datastore';
+import { Votes } from './models';
+import aws_exports from "./aws-exports";
+import Amplify from 'aws-amplify';
+
+Amplify.configure(aws_exports);
+
+async function onInit() {
+  const models = await DataStore.query(Votes);
+  console.log(models);  
+}
 
 function App() {
+
+  onInit()
+
   return (
     <div className="App">
       <header className="App-header">

@@ -10,6 +10,11 @@
       "StackName": "amplify-applause-staging-142306",
       "StackId": "arn:aws:cloudformation:eu-central-1:540352874146:stack/amplify-applause-staging-142306/5d0b3f30-5832-11ec-8935-0a3ff1b46d1e",
       "AmplifyAppId": "d1jxdb5u2139o9"
+    },
+    "categories": {
+      "auth": {
+        "applause8a3f31f1": {}
+      }
     }
   }
 }

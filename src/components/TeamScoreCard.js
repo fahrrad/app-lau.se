@@ -6,7 +6,7 @@ import { Votes } from '../models';
 export default function TeamScoreCard ({Team}) {
     const [score, setScore] = useState({});
 
-    useEffect(() => {
+    const loadScores = () => {
         DataStore.query(Votes, v => v.Team("eq", Team))
         .then (data => { 
             const votes = { "INNOVATION": 0, "VALUE": 0, 
@@ -32,7 +32,9 @@ export default function TeamScoreCard ({Team}) {
                 votes.total +=1;
             });
 
-            setScore(votes);}) }, []);
+            setScore(votes);}) };
+
+    useEffect(() => { setInterval (loadScores, 1000) } , []);
 
     return (score ? 
     <div className="row"> <h2>Team {Team} </h2>

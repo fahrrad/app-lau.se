@@ -1,22 +1,25 @@
 import React from 'react';
 
-export default function ScoreBoard () {
+import TeamScoreCard from './TeamScoreCard';
+import {Teams} from '../models';
 
+export default function ScoreBoard () {
+    return (
     <div>
         <div className="team-1">
-            <TeamScoreCard Team="ONE" />
+            <TeamScoreCard Team={Teams.ONE} />
         </ div>
         <div className="team-3">
-            <TeamScoreCard Team="THREE" />    
+            <TeamScoreCard Team={Teams.THREE} />    
         </ div>
         <div className="team-4">
-            <TeamScoreCard Team="FOUR" />
+            <TeamScoreCard Team={Teams.FOUR} />
         </ div>
         <div className="team-5">
-            <TeamScoreCard Team="FIVE" />
+            <TeamScoreCard Team={Teams.FIVE} />
         </ div>
         <div className="team-6">
-            <TeamScoreCard Team="SIX" />
+            <TeamScoreCard Team={Teams.SIX} />
         </ div>
-    </div> 
+    </div> );
 }

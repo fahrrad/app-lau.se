@@ -7,3 +7,11 @@
 .team-voting-section {
     padding: 20 px;
 }
+
+.score-row {
+    padding-left: 50px;
+}
+
+.score-row-total {
+    font-weight: bold;
+}

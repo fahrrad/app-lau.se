@@ -15,6 +15,6 @@ function castVote(team, category){
 
 export default function VoteButton ({Team, Category}) {
     return (
-        <div className="btn btn-success vote-button" onClick={() => castVote(Team, Category)}> Vote for {Team} and {Category} </div>
+        <div className="btn btn-success vote-button" onClick={() => castVote(Team, Category)}> {Category} </div>
     )
 }

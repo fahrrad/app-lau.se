@@ -10,7 +10,7 @@ export default function VotesComponent () {
         DataStore.query(Votes)
         .then (data => { console.log (data); setVotes(data);}) }, [])
 
-
+        
     return (
         votes[0] ? 
         <ul>    

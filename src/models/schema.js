@@ -13,14 +13,18 @@ export const schema = {
                 "Team": {
                     "name": "Team",
                     "isArray": false,
-                    "type": "String",
+                    "type": {
+                        "enum": "Teams"
+                    },
                     "isRequired": false,
                     "attributes": []
                 },
                 "Category": {
                     "name": "Category",
                     "isArray": false,
-                    "type": "String",
+                    "type": {
+                        "enum": "Categories"
+                    },
                     "isRequired": false,
                     "attributes": []
                 },
@@ -74,7 +78,27 @@ export const schema = {
             ]
         }
     },
-    "enums": {},
+    "enums": {
+        "Categories": {
+            "name": "Categories",
+            "values": [
+                "INNOVATION",
+                "IMPACT",
+                "VALUE",
+                "REALISM"
+            ]
+        },
+        "Teams": {
+            "name": "Teams",
+            "values": [
+                "ONE",
+                "THREE",
+                "FOUR",
+                "FIVE",
+                "SIX"
+            ]
+        }
+    },
     "nonModels": {},
-    "version": "a74ab22f432a4eb734d0bb066496dcde"
+    "version": "4a29f18daf858100edef60b1e2813789"
 };

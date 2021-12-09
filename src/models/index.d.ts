@@ -1,6 +1,19 @@
 import { ModelInit, MutableModel, PersistentModelConstructor } from "@aws-amplify/datastore";
 
+export enum Categories {
+  INNOVATION = "INNOVATION",
+  IMPACT = "IMPACT",
+  VALUE = "VALUE",
+  REALISM = "REALISM"
+}
 
+export enum Teams {
+  ONE = "ONE",
+  THREE = "THREE",
+  FOUR = "FOUR",
+  FIVE = "FIVE",
+  SIX = "SIX"
+}
 
 
 
@@ -10,8 +23,8 @@ type VotesMetaData = {
 
 export declare class Votes {
   readonly id: string;
-  readonly Team?: string;
-  readonly Category?: string;
+  readonly Team?: Teams | keyof typeof Teams;
+  readonly Category?: Categories | keyof typeof Categories;
   readonly User?: string;
   readonly createdAt?: string;
   readonly updatedAt?: string;

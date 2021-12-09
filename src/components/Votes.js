@@ -8,7 +8,7 @@ export default function VotesComponent () {
 
     useEffect(() => {
         DataStore.query(Votes)
-        .then (data => setVotes(data)) }, [])
+        .then (data => { console.log (data); setVotes(data);}) }, [])
 
 
     return (

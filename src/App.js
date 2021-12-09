@@ -21,8 +21,8 @@ function App() {
       <Header />
       <BrowserRouter>
         <Routes>
-          <Route path="/vote" element={ <VoteApp /> }/>
-          <Route path="/" element={ <ScoreBoard /> }/>
+          <Route path="/" element={ <VoteApp /> }/>
+          <Route path="/leaderboard" element={ <ScoreBoard /> }/>
         </Routes>
       </BrowserRouter>
     </div >

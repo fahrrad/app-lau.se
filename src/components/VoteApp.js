@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 
+import {Link} from 'react-router-dom';
+
 import {Teams} from '../models';
 
 import TeamVotingPanel from './TeamVotingPanel';
@@ -28,6 +30,8 @@ return (
         </div>
 
         <TeamVotingPanel Team={team.team} />
+
+        <Link to="/leaderboard" >leaderboard</Link>
         
     </div>)
 }

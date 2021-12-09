@@ -35,12 +35,12 @@ export default function TeamScoreCard ({Team}) {
             setScore(votes);}) }, []);
 
     return (score ? 
-    <div className="row"> <h2> {Team} </h2>
+    <div className="row"> <h2>Team {Team} </h2>
         <div className="row score-row">Innovation: {score.INNOVATION} </div> 
         <div className="row score-row">Realism: {score.REALISM} </div> 
         <div className="row score-row">Impact: {score.IMPACT} </div> 
         <div className="row score-row">Value: {score.VALUE} </div> 
-        <div className="row score-row-total" > Total: {score.total}</div>
+        <div className="row score-row-total" >Total: {score.total}</div>
     </div> 
     
     : <div>Loading</div>)
